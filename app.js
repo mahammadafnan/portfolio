@@ -377,24 +377,47 @@ const lon = 78-9;
         renderer.setSize(newWidth, newHeight);
     });
     
-    // 8. NETLIFY AJAX FORM SUBMISSION
+    // 8. WEB3FORMS AJAX FORM SUBMISSION (Universal static form delivery)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const formData = new FormData(contactForm);
             
-            fetch('/', {
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            // Show sending feedback on submit button
+            const submitBtn = contactForm.querySelector('.form-submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
+            
+            fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let res = await response.json();
+                if (response.status == 200) {
+                    alert('Thank you! Your message has been sent successfully.');
+                    contactForm.reset();
+                } else {
+                    console.log(res);
+                    alert(res.message || 'Error submitting message.');
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                alert("Oops! Something went wrong. Please check your network and try again.");
             })
             .then(() => {
-                alert('Thank you! Your message has been sent successfully.');
-                contactForm.reset();
-            })
-            .catch((error) => {
-                alert('Oops! There was an error sending your message: ' + error);
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             });
         });
     }
