@@ -404,16 +404,16 @@ const lon = 78-9;
             .then(async (response) => {
                 let res = await response.json();
                 if (response.status == 200) {
-                    alert('Thank you! Your message has been sent successfully.');
+                    showNotification('Message sent successfully!');
                     contactForm.reset();
                 } else {
                     console.log(res);
-                    alert(res.message || 'Error submitting message.');
+                    showNotification(res.message || 'Error submitting message.', false);
                 }
             })
             .catch(error => {
                 console.log(error);
-                alert("Oops! Something went wrong. Please check your network and try again.");
+                showNotification('Oops! Network error occurred.', false);
             })
             .then(() => {
                 submitBtn.textContent = originalText;
@@ -421,4 +421,49 @@ const lon = 78-9;
             });
         });
     }
+}
+
+// Global custom notification toast system
+function showNotification(message, isSuccess = true) {
+    let container = document.querySelector('.toast-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'toast-container';
+        document.body.appendChild(container);
+    }
+    
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    if (!isSuccess) {
+        toast.style.borderLeftColor = '#ff3b30'; // red for error
+    }
+    
+    const iconSpan = document.createElement('span');
+    iconSpan.className = 'toast-icon';
+    iconSpan.innerHTML = isSuccess ? '✓' : '✗';
+    if (!isSuccess) {
+        iconSpan.style.color = '#ff3b30';
+        iconSpan.style.borderColor = '#ff3b30';
+    }
+    
+    const textSpan = document.createElement('span');
+    textSpan.className = 'toast-message';
+    textSpan.textContent = message;
+    
+    toast.appendChild(iconSpan);
+    toast.appendChild(textSpan);
+    container.appendChild(toast);
+    
+    // Trigger transition reflow
+    setTimeout(() => {
+        toast.classList.add('toast-show');
+    }, 10);
+    
+    // Dismiss after 4s
+    setTimeout(() => {
+        toast.classList.remove('toast-show');
+        setTimeout(() => {
+            toast.remove();
+        }, 500);
+    }, 4000);
 }
