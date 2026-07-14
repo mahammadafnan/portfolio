@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements — Mahammad Afnan</title>
+    <meta name="description" content="Academic achievements, hackathon placements, and honors for Mahammad Afnan.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@700;800;900&family=Outfit:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Custom Cursor elements -->
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+    <div class="custom-cursor-ring" id="custom-cursor-ring" aria-hidden="true"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-logo">
+            <a href="index.html" class="logo-link" style="text-decoration: none;">
+                <span class="logo-name">MAHAMMAD AFNAN</span>
+            </a>
+            <span class="logo-sub">CSE Undergraduate SJEC’27</span>
+            <div class="logo-socials">
+                <a href="https://github.com/mahammadafnan" target="_blank" rel="noopener noreferrer" class="logo-social-link">github</a>
+                <span class="social-dot">•</span>
+                <a href="https://www.linkedin.com/in/mahammad-afnan/" target="_blank" rel="noopener noreferrer" class="logo-social-link">linkedin</a>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#about" class="nav-link">Profile</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="projects.html" class="nav-link">Works</a>
+            <a href="achievements.html" class="nav-link active-nav">Achievements</a>
+            <a href="index.html#contact" class="nav-link">Connect</a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 150px; min-height: calc(100vh - 120px);">
+        <!-- Achievements Section -->
+        <section class="projects-section" style="border-top: none; background-color: var(--bg-color);">
+            <div class="section-container">
+                <div class="section-header animate-reveal active">
+                    <h1 class="section-title" style="font-size: 52px;">Achievements</h1>
+                </div>
+
+                <!-- Achievements Grid (matching Projects style) -->
+                <div class="projects-grid animate-reveal active" style="margin-top: 40px; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                    <!-- Achievement 1 -->
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-meta">
+                                <span class="project-type">Competitive Programming / National</span>
+                                <span class="project-date">Feb 2026</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">HackWithInfy 2026 Qualifier</h3>
+                        <p class="project-description">
+                            Cleared the national qualifier round, solving advanced data structures and algorithms under timed conditions. Represented SJEC among 15 selected third-year students progressing to Round 2.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">Algorithm Design: Optimized search, dynamic programming, and math formulations.</div>
+                            <div class="highlight-item">National Standing: Ranked in the top qualifying bracket among thousands of entries.</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-meta">
+                                <span class="project-type">Hackathons / Collaborative Development</span>
+                                <span class="project-date">2023 - 2027</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">National-Level Hackathons</h3>
+                        <p class="project-description">
+                            Designed, built, and pitched digital solutions under 36-hour sprints, collaborating with cross-functional developers on real-world engineering challenges.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">Full-Stack Scopes: Led architecture design, secure hosting, and backend integrations.</div>
+                            <div class="highlight-item">Domain Footprint: Developed predictive elder-care biometrics and web dashboards.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 40px 50px; background-color: var(--bg-color);">
+        <div class="footer-divider" style="margin-bottom: 30px;"></div>
+        <div class="footer-row">
+            <span class="footer-copy">&copy; 2026 Mahammad Afnan. All Rights Reserved.</span>
+            <a href="index.html" class="back-to-top-btn">Home</a>
+        </div>
+    </footer>
+</body>
+</html>

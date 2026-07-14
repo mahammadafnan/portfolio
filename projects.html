@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works — Mahammad Afnan</title>
+    <meta name="description" content="Selected software engineering projects, Cloud Security Posture Management, and ML systems developed by Mahammad Afnan.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@700;800;900&family=Outfit:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Custom Cursor elements -->
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+    <div class="custom-cursor-ring" id="custom-cursor-ring" aria-hidden="true"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-logo">
+            <a href="index.html" class="logo-link" style="text-decoration: none;">
+                <span class="logo-name">MAHAMMAD AFNAN</span>
+            </a>
+            <span class="logo-sub">CSE Undergraduate SJEC’27</span>
+            <div class="logo-socials">
+                <a href="https://github.com/mahammadafnan" target="_blank" rel="noopener noreferrer" class="logo-social-link">github</a>
+                <span class="social-dot">•</span>
+                <a href="https://www.linkedin.com/in/mahammad-afnan/" target="_blank" rel="noopener noreferrer" class="logo-social-link">linkedin</a>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#about" class="nav-link">Profile</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="projects.html" class="nav-link active-nav">Works</a>
+            <a href="achievements.html" class="nav-link">Achievements</a>
+            <a href="index.html#contact" class="nav-link">Connect</a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 150px; min-height: calc(100vh - 120px);">
+        <!-- Projects Section -->
+        <section class="projects-section" style="border-top: none; background-color: var(--bg-color);">
+            <div class="section-container">
+                <div class="section-header animate-reveal active">
+
+                    <h1 class="section-title" style="font-size: 52px;">Selected Projects</h1>
+                </div>
+
+                <!-- Works Grid -->
+                <div class="projects-grid animate-reveal active" style="margin-top: 40px;">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-meta">
+                                <span class="project-type">Major Project / Cloud & Devops</span>
+                                <span class="project-date">Jan 2026 - Ongoing</span>
+                            </div>
+                            <a href="https://github.com/mahammadafnan" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub Repository">
+                                <svg class="github-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3 class="project-title">CloudLockr — Cloud Security Posture Management (CSPM)</h3>
+                        <p class="project-description">
+                            An automated configuration auditor mapping AWS resources (S3, EC2, IAM, SGs) to CIS Benchmarks with automated PDF compliance reporting.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">Audit Engine: Weighted risk scoring (0-100) mapped to security rules.</div>
+                            <div class="highlight-item">Gemini Integration: Conversation-driven security reviews and CLI fixes.</div>
+                            <div class="highlight-item">DevOps: Containerized microservices using Docker & Docker Compose.</div>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">React (Vite)</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">AWS SDK v3</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-meta">
+                                <span class="project-type">Machine Learning Project</span>
+                                <span class="project-date">Jan 2026 - May 2026</span>
+                            </div>
+                            <a href="https://github.com/mahammadafnan" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub Repository">
+                                <svg class="github-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3 class="project-title">SAMPARK — AI-Powered Elderly Care System</h3>
+                        <p class="project-description">
+                            A predictive health analyzer and conversational assistant designed for vulnerable elder monitoring.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">Predictive ML: Random Forest classifiers analyzing biometric logs for wellness risk.</div>
+                            <div class="highlight-item">Gemini Agent: Built-in voice assistant with automatic SMTP alert notifications.</div>
+                            <div class="highlight-item">Caregiver Console: Live metrics, medicine scheduling, and risk status board.</div>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">HTML5/CSS3/JS</span>
+                            <span class="tech-tag">Gemini API</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-meta">
+                                <span class="project-type">Full Stack Project</span>
+                                <span class="project-date">Aug 2025 - Dec 2025</span>
+                            </div>
+                            <a href="https://github.com/mahammadafnan" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub Repository">
+                                <svg class="github-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3 class="project-title">Health360 — Full-Stack Healthcare Web App</h3>
+                        <p class="project-description">
+                            A secure medical connection, doctor routing, and diagnostic management portal.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">Intelligent Routing: Specialist doctor matching based on patient symptoms.</div>
+                            <div class="highlight-item">Task Automation: Automated medicine refill schedules and triggers.</div>
+                            <div class="highlight-item">UX Engineering: Iterative wireframing using formal Design Thinking methodologies.</div>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SQL Databases</span>
+                            <span class="tech-tag">RESTful APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 40px 50px; background-color: var(--bg-color);">
+        <div class="footer-divider" style="margin-bottom: 30px;"></div>
+        <div class="footer-row">
+            <span class="footer-copy">&copy; 2026 Mahammad Afnan. All Rights Reserved.</span>
+            <a href="index.html" class="back-to-top-btn">Home</a>
+        </div>
+    </footer>
+</body>
+</html>

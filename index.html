@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahammad Afnan — Portfolio</title>
+    <meta name="description" content="Portfolio of Mahammad Afnan, a CSE Undergraduate SJEC'27 specializing in Full-Stack Development, Cloud Security, and Applied ML.">
+    <meta name="author" content="Mahammad Afnan">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern backup typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@700;800;900&family=Outfit:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Three.js CDN for interactive 3D WebGL scene -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Custom Cursor elements -->
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+    <div class="custom-cursor-ring" id="custom-cursor-ring" aria-hidden="true"></div>
+
+    <!-- Noise Overlay for premium paper/film-like texture -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Top Header -->
+    <header class="header">
+        <div class="header-logo">
+            <span class="logo-name">MAHAMMAD AFNAN</span>
+            <span class="logo-sub">CSE Undergraduate SJEC’27</span>
+            <div class="logo-socials">
+                <a href="https://github.com/mahammadafnan" target="_blank" rel="noopener noreferrer" class="logo-social-link">github</a>
+                <span class="social-dot">•</span>
+                <a href="https://www.linkedin.com/in/mahammad-afnan/" target="_blank" rel="noopener noreferrer" class="logo-social-link">linkedin</a>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">Profile</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="projects.html" class="nav-link">Works</a>
+            <a href="achievements.html" class="nav-link">Achievements</a>
+            <a href="#contact" class="nav-link">Connect</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <!-- Background Layer - Solid Red Title -->
+            <div class="hero-bg-text-container select-none">
+                <span class="hero-bg-text">PORTFOLIO</span>
+            </div>
+
+            <!-- Profile image wrapper (Middle Layer) -->
+            <div class="hero-image-wrapper">
+                <div class="hero-crimson-glow"></div>
+                <img src="assets/profile_nobg.png" alt="Mahammad Afnan" class="hero-profile-image">
+            </div>
+
+            <!-- Hero Layout Bottom Details (Row matching 2nd Reference Image) -->
+            <div class="hero-metadata-container select-none">
+                <div class="hero-metadata-desc">
+                    Final year Computer Science undergraduate at St. Joseph Engineering College with hands-on experience across full-stack development, cloud security, and applied ML.
+                </div>
+                <div class="hero-metadata-location">
+                    Mangalore, India
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator select-none">
+                <div class="scroll-line-container">
+                    <div class="scroll-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-glow"></div>
+            <div class="section-container grid-2">
+                <!-- Bio Copy -->
+                <div class="about-text-content">
+
+                    <h2 class="section-title animate-reveal">I build robust web systems, explore cloud security posture, and engineer applied ML models.</h2>
+                    <p class="section-desc animate-reveal">
+                        I am a Computer Science & Engineering Undergraduate at St. Joseph Engineering College, class of 2027. I operate at the intersection of full-stack engineering, secure deployments, and predictive modeling, designing products that run efficiently and scale reliably.
+                    </p>
+                    <p class="section-desc animate-reveal">
+                        Based in <strong>Mangalore, India</strong>, I approach software challenges with an end-to-end design thinking methodology, ensuring clean code architectures alongside intuitive interfaces.
+                    </p>
+
+
+                </div>
+
+                <!-- 3D Canvas Visualizer -->
+                <div class="about-visualizer">
+                    <div class="canvas-glow"></div>
+                    <div id="threejs-container" class="threejs-canvas-wrapper"></div>
+                    <div class="globe-telemetry">
+                        <div class="telemetry-item">
+                            <span class="telemetry-label">LOCATION</span>
+                            <span class="telemetry-val">MANGALORE, KARNATAKA, INDIA</span>
+                        </div>
+                        <div class="telemetry-item">
+                            <span class="telemetry-label">COORDINATES</span>
+                            <span class="telemetry-val">12.9141° N, 74.8560° E</span>
+                        </div>
+                    </div>
+                    <span class="visualizer-caption">DRAG TO ROTATE GLOBE • BEACON ACTIVE</span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-glow"></div>
+            <div class="section-container grid-2">
+                <!-- Info Column -->
+                <div class="contact-info-panel">
+
+                    <h2 class="contact-cta-title">Let's build<br>something.</h2>
+                    <p class="contact-desc">
+                        Open to full-stack positions, cloud engineering internships, developer collaborations, and building custom websites for businesses. Let's connect to discuss secure cloud deployments, scalable web architectures, or custom digital solutions for your business.
+                    </p>
+
+                    <div class="contact-details-list">
+                        <div class="contact-detail-row">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-val">Mangalore, India</span>
+                        </div>
+                        <div class="contact-detail-row">
+                            <span class="detail-label">Email</span>
+                            <a href="mailto:mahammadafnan04@gmail.com" class="detail-val underline-link">mahammadafnan04@gmail.com</a>
+                        </div>
+                        <div class="contact-detail-row">
+                            <span class="detail-label">Phone</span>
+                            <div class="phone-dropdown-container">
+                                <span class="detail-val">+91 63613 80193</span>
+                                <div class="phone-dropdown-menu">
+                                    <a href="tel:+916361380193" class="dropdown-item">Call Number</a>
+                                    <a href="https://wa.me/916361380193" target="_blank" rel="noopener noreferrer" class="dropdown-item whatsapp-item">WhatsApp Chat</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-detail-row font-medium">
+                            <span class="detail-label">Digital</span>
+                            <div class="digital-links-row">
+                                <a href="https://github.com/mahammadafnan" target="_blank" rel="noopener noreferrer" class="digital-link">GitHub</a>
+                                <span class="link-divider">•</span>
+                                <a href="https://www.linkedin.com/in/mahammad-afnan/" target="_blank" rel="noopener noreferrer" class="digital-link">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <form class="contact-form" id="contact-form" name="contact" data-netlify="true">
+                    <!-- Hidden input required for Netlify AJAX submissions -->
+                    <input type="hidden" name="form-name" value="contact">
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="form-name">Name</label>
+                        <input type="text" id="form-name" name="name" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="form-email">Email</label>
+                        <input type="email" id="form-email" name="email" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="form-message">Message</label>
+                        <textarea id="form-message" name="message" rows="4" required class="form-input textarea-input"></textarea>
+                    </div>
+                    <div class="form-button-container">
+                        <button type="submit" class="form-submit-btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-divider"></div>
+                <div class="footer-row">
+                    <span class="footer-copy">&copy; 2026 Mahammad Afnan. All Rights Reserved.</span>
+                    <a href="#hero" class="back-to-top-btn">Back to top</a>
+                </div>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
