@@ -1,5 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
+    // 0. INTRO LOADER ANIMATION (Session-scoped)
+    // ----------------------------------------------------
+    const introBg = document.getElementById('intro-bg');
+    const logoName = document.querySelector('.logo-name');
+    const introPlayed = sessionStorage.getItem('intro-played');
+    
+    // Only run the intro animation on the main landing page
+    const isLandingPage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '';
+    
+    if (introBg && logoName && !introPlayed && isLandingPage) {
+        document.body.classList.add('intro-active');
+        
+        // Split name into animated letter spans
+        const text = logoName.textContent;
+        logoName.innerHTML = '';
+        [...text].forEach((char, i) => {
+            const span = document.createElement('span');
+            span.className = 'char';
+            span.style.animationDelay = `${i * 0.04}s`;
+            span.textContent = char === ' ' ? '\u00A0' : char; // Non-breaking space for layout
+            logoName.appendChild(span);
+        });
+        
+        // After letter reveal animation completes (1.8s)
+        setTimeout(() => {
+            // Remove intro active states to fly logo back to place
+            document.body.classList.remove('intro-active');
+            
+            // Fade out loader background overlay
+            introBg.classList.add('intro-fade');
+            
+            // Restore original text structure to prevent layout glitches of spans
+            setTimeout(() => {
+                logoName.textContent = text;
+                introBg.remove();
+            }, 1400); // Wait for logo Y-fly transit to complete
+            
+            sessionStorage.setItem('intro-played', 'true');
+        }, 1800);
+    } else {
+        if (introBg) introBg.remove();
+    }
+
+    // ----------------------------------------------------
     // 1. CUSTOM CURSOR TRACKING
     // ----------------------------------------------------
     const cursor = document.getElementById('custom-cursor');
